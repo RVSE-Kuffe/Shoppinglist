@@ -1,0 +1,94 @@
+.list-item-card {
+  background-color: #f3f4f6; // Alap háttérszín
+  border: 1px solid #ddd; // Szürke szegély
+  border-radius: 8px; // Lekerekített sarkok
+  padding: 15px; // Belső margók
+  margin: 10px 0; // Külső margó a kártyák között
+  display: flex; // Flexbox elrendezés
+  justify-content: space-between; // Elemek közötti távolság kitöltése
+  align-items: center; // Elemek függőleges középre igazítása
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); // Finom árnyék a kártya alatt
+  transition: background-color 0.3s ease; // Simulékony háttérszín váltás
+
+  &.bought {
+    background-color: #e6f7e6; // Zöldes háttérszín, ha megvásárolt
+    color: #4caf50; // Zöld szöveg
+    text-decoration: line-through; // Áthúzás a megvásárolt elemeknél
+  }
+
+  .item-info {
+    display: flex; // Flexbox elrendezés az információs blokkhoz
+    flex-direction: column; // Elemsor oszlopba rendezése
+    gap: 5px; // Elemek közötti távolság
+  }
+
+  .item-count-container {
+    display: flex; // Flexbox elrendezés a darabszám blokkhoz
+    align-items: center; // Függőleges középre igazítás
+    gap: 10px; // Távolság a darabszám és gombok között
+  }
+
+  .item-count {
+    font-size: 1rem; // Betűméret
+    color: #555; // Szöveg színe
+  }
+
+  .count-buttons {
+    display: flex; // Flexbox elrendezés a számláló gombokhoz
+    gap: 5px; // Gombok közötti távolság
+  }
+
+  .decrease-button,
+  .increase-button {
+    background-color: #ffb74d; // Narancssárga gombok
+    color: white; // Fehér szöveg
+    border: none; // Nincs szegély
+    padding: 5px 10px; // Belső margók
+    border-radius: 3px; // Lekerekített sarkok
+    cursor: pointer; // Mutató ikon gombra állítva
+    font-size: 0.9rem; // Betűméret
+    font-weight: bold; // Vastagított szöveg
+    transition: background-color 0.3s; // Simulékony háttérszín váltás
+
+    &:hover {
+      background-color: #ffa726; // Sötétebb narancssárga hoverkor
+    }
+
+    &:disabled {
+      background-color: #ddd; // Szürke háttér, ha le van tiltva
+      cursor: not-allowed; // Tiltott ikon, ha nem használható
+    }
+  }
+
+  .button-group {
+    display: flex; // Flexbox elrendezés a gombcsoporthoz
+    flex-direction: column; // Oszlopos elrendezés
+    gap: 10px; // Gombok közötti távolság
+  }
+
+  .delete-button {
+    background-color: #ff4d4f; // Piros háttérszín
+    color: white; // Fehér szöveg
+    border: none; // Nincs szegély
+    padding: 5px 10px; // Belső margók
+    border-radius: 3px; // Lekerekített sarkok
+    cursor: pointer; // Mutató ikon gombra állítva
+
+    &:hover {
+      background-color: #ff7875; // Világosabb piros hoverkor
+    }
+  }
+
+  .tick-button {
+    background-color: #4caf50; // Zöld háttérszín
+    color: white; // Fehér szöveg
+    border: none; // Nincs szegély
+    padding: 5px 10px; // Belső margók
+    border-radius: 3px; // Lekerekített sarkok
+    cursor: pointer; // Mutató ikon gombra állítva
+
+    &:hover {
+      background-color: #66bb6a; // Világosabb zöld hoverkor
+    }
+  }
+}

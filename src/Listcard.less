@@ -1,0 +1,33 @@
+.list-card {
+  background-color: #fffae6; // Világos sárga háttérszín a kártyához
+  padding: 10px; // Belső margó
+  margin: 10px; // Külső margó a többi kártyától
+  width: 150px; // Kártya szélessége
+  border: 1px solid #e2c089; // Világos barna szegély
+  border-radius: 5px; // Lekerekített sarkok
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); // Árnyék a kártya alatt
+  font-family: Arial, sans-serif; // Betűtípus
+  text-align: center; // Szöveg középre igazítása
+  transition: transform 0.2s; // Simulékony méretváltozás hover esetén
+
+  &:hover {
+    transform: scale(1.05); // Kártya nagyítása hover állapotban
+  }
+}
+
+.list-date {
+  font-size: 0.9rem; // Dátum szövegének betűmérete
+  color: #333; // Dátum szövegének színe
+  margin-bottom: 5px; // Alsó margó
+
+  &.completed {
+    text-decoration: line-through; // Áthúzás, ha a lista kész
+    color: #888; // Halvány szürke szöveg szín
+  }
+}
+
+.list-items-count {
+  font-size: 0.8rem; // Listaelem-számláló szövegének betűmérete
+  color: #555; // Listaelem-számláló szövegének színe
+  margin-top: 5px; // Felső margó
+}

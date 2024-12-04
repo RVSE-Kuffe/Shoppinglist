@@ -1,0 +1,28 @@
+.right-pane {
+  padding: 20px; /* Belső margó, hogy a tartalom ne érjen közvetlenül az elem széléhez */
+  background-color: #A0522D; /* A jobb oldali panel háttérszíne */
+  border-left: 1px solid #e0e0e0; /* Vékony elválasztó vonal a bal oldalán */
+  height: 100%; /* A panel teljes magasságának beállítása */
+  overflow-y: auto; /* Görgetősáv megjelenítése, ha a tartalom túl magas */
+
+  .pane-title {
+    font-size: 1.5rem; /* Cím betűmérete */
+    font-weight: bold; /* Félkövér betűstílus */
+    color: #333; /* A cím szövegének színe */
+    margin-bottom: 20px; /* Alsó margó a cím és a következő tartalom között */
+    text-align: center; /* A szöveg középre igazítása */
+  }
+
+  .item-list {
+    display: flex; /* Rugalmas konténer a belső elemek elrendezéséhez */
+    flex-direction: column; /* Az elemek egymás alatti elrendezése */
+    gap: 15px; /* Távolság az egyes elemek (pl. OwnedItemCard) között */
+  }
+
+  .empty-message {
+    color: #888; /* Halvány szín az üzenethez */
+    font-style: italic; /* Dőlt betűstílus */
+    text-align: center; /* Szöveg középre igazítása */
+    margin-top: 20px; /* Felső margó, hogy az üzenet elkülönüljön a korábbi tartalomtól */
+  }
+}

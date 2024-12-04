@@ -1,0 +1,61 @@
+.middle-panel {
+  margin: 0 auto; // Automatikus középre igazítás vízszintesen
+  padding: 20px; // Belső margók
+  background-color: #fff; // Fehér háttérszín
+  border-radius: 8px; // Lekerekített sarkok
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); // Árnyék a panel alatt
+  font-family: Arial, sans-serif; // Betűtípus
+
+  .list-title {
+    font-size: 1.5rem; // Cím betűmérete
+    color: #333; // Szöveg színe
+    text-align: center; // Középre igazítás
+    margin-bottom: 20px; // Alsó margó
+  }
+
+  .add-button-container {
+    display: flex; // Flexbox elrendezés
+    justify-content: center; // Középre igazítás vízszintesen
+    margin-bottom: 20px; // Távolság a lista előtt
+  }
+
+  .action-buttons {
+    display: flex; // Flexbox elrendezés a műveleti gombokhoz
+    justify-content: center; // Gombok középre igazítása
+    gap: 15px; // Távolság a gombok között
+    margin-bottom: 20px; // Alsó margó a listaelemek előtt
+  }
+
+  .action-buttons button {
+    background-color: #007bff; // Kék háttérszín
+    color: white; // Fehér szöveg
+    border: none; // Nincs szegély
+    padding: 10px 15px; // Belső margók
+    border-radius: 5px; // Lekerekített sarkok
+    cursor: pointer; // Mutató ikon gombra állítva
+    font-size: 1rem; // Betűméret
+    transition: background-color 0.3s; // Simulékony háttérszín váltás
+
+    &:hover {
+      background-color: #0056b3; // Sötétebb kék hoverkor
+    }
+
+    &:active {
+      background-color: #004085; // Még sötétebb kék kattintáskor
+    }
+  }
+
+  .list-items {
+    display: flex; // Flexbox elrendezés a listaelemekhez
+    flex-direction: column; // Függőleges rendezés
+    gap: 10px; // Távolság az egyes listaelemek között
+  }
+
+  .empty-items-message,
+  .no-list-selected-message {
+    color: gray; // Szöveg színe szürke
+    font-style: italic; // Dőlt betűstílus
+    text-align: center; // Szöveg középre igazítása
+    margin-top: 20px; // Felső margó
+  }
+}

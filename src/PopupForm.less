@@ -1,0 +1,81 @@
+.popup-form-overlay {
+  position: fixed; // Az overlay mindig ugyanott marad az ablakban
+  top: 0; // Felső szélhez igazítás
+  left: 0; // Bal szélhez igazítás
+  width: 100%; // Az overlay teljes szélességet lefedi
+  height: 100%; // Az overlay teljes magasságot lefedi
+  background: rgba(0, 0, 0, 0.5); // Sötét, átlátszó háttér
+  display: flex; // Flexbox elrendezés
+  justify-content: center; // Középre igazítás vízszintesen
+  align-items: center; // Középre igazítás függőlegesen
+  z-index: 1000; // Magasabb rétegsorrend az overlay számára
+}
+
+.popup-form {
+  background: white; // Fehér háttérszín a formának
+  border-radius: 8px; // Lekerekített sarkok
+  padding: 20px; // Belső margók
+  width: 400px; // Fix szélesség
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); // Árnyék a formának
+  text-align: center; // Szöveg középre igazítása
+
+  h3 {
+    margin-bottom: 20px; // Alsó margó a címsor alatt
+    color: #333; // Szöveg színe
+  }
+
+  form {
+    display: flex; // Flexbox elrendezés a form tartalmának
+    flex-direction: column; // Elemsor oszlopba rendezése
+    gap: 15px; // Távolság az elemek között
+
+    label {
+      display: flex; // Flexbox elrendezés a label számára
+      flex-direction: column; // A címke és mező oszlopban jelenik meg
+      text-align: left; // Szöveg balra igazítása
+      font-size: 0.9rem; // Kisebb betűméret
+      color: #555; // Lágy szürke szöveg
+
+      input,
+      select {
+        margin-top: 5px; // Felső margó a mezők számára
+        padding: 8px; // Belső margók a mezőkben
+        font-size: 1rem; // Betűméret a mezőkben
+        border: 1px solid #ddd; // Halvány szegély
+        border-radius: 4px; // Lekerekített sarkok
+      }
+    }
+  }
+
+  .popup-form-buttons {
+    display: flex; // Flexbox elrendezés a gombok számára
+    justify-content: space-between; // Gombok szélső igazítása
+
+    button {
+      padding: 10px 15px; // Belső margók
+      font-size: 1rem; // Betűméret
+      border: none; // Nincs szegély
+      border-radius: 4px; // Lekerekített sarkok
+      cursor: pointer; // Mutató ikon gombra állítva
+      transition: background-color 0.2s; // Simulékony háttérszín váltás
+
+      &:first-child {
+        background-color: #28a745; // Zöld háttér az első gomb számára
+        color: white; // Fehér szöveg
+      }
+
+      &:first-child:hover {
+        background-color: #218838; // Sötétebb zöld hoverkor
+      }
+
+      &:last-child {
+        background-color: #dc3545; // Piros háttér az utolsó gomb számára
+        color: white; // Fehér szöveg
+      }
+
+      &:last-child:hover {
+        background-color: #c82333; // Sötétebb piros hoverkor
+      }
+    }
+  }
+}

@@ -1,0 +1,130 @@
+// Alapszínek
+@background-color: #f9f9f9; // Háttér színe
+@primary-color: #333; // Elsődleges szövegszín
+@secondary-color: #555; // Másodlagos szövegszín
+@accent-color: #4a90e2; // Kiemelések és linkek színe
+
+// Tipográfia
+@font-size-base: 16px; // Alap betűméret
+@font-family: "Arial", sans-serif; // Alap betűtípus
+
+// Body alapértelmezett stílusai
+body {
+  margin: 0; // Nincs margó
+  padding: 0; // Nincs padding
+  font-size: @font-size-base; // Betűméret
+  font-family: @font-family; // Betűtípus
+  color: @primary-color; // Szövegszín
+  background-color: @background-color; // Háttérszín
+  line-height: 1.5; // Sorok közötti távolság
+  -webkit-font-smoothing: antialiased; // Simább szöveg megjelenítés
+}
+
+// Fejlécek stílusai
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: @primary-color; // Fejlécek színe
+  margin: 0 0 1em; // Alsó margó
+  font-weight: 500; // Közepes betűvastagság
+}
+
+h1 {
+  font-size: 2.5rem; // Elsődleges fejléc mérete
+}
+
+// Paragrafusok stílusai
+p {
+  margin: 0 0 1.5em; // Alsó margó
+  color: @secondary-color; // Szövegszín
+}
+
+// Linkek stílusai
+a {
+  color: @accent-color; // Link színe
+  text-decoration: none; // Nincs aláhúzás
+
+  &:hover {
+    text-decoration: underline; // Aláhúzás hover állapotban
+  }
+}
+
+// Gombok stílusai
+button {
+  padding: 0.6em 1.2em; // Belső margók
+  font-size: 1rem; // Betűméret
+  font-family: inherit; // Örökli a szülő elem betűtípusát
+  color: #fff; // Szövegszín (fehér)
+  background-color: @accent-color; // Háttérszín
+  border: none; // Nincs keret
+  border-radius: 4px; // Lekerekített sarkok
+  cursor: pointer; // Mutató ikon gombra állítva
+  transition: background-color 0.3s ease; // Simulékony háttérszín váltás
+
+  &:hover {
+    background-color: darken(@accent-color, 10%); // Háttér sötétebb hover állapotban
+  }
+}
+
+// Konténerek stílusai
+.container {
+  max-width: 800px; // Maximális szélesség
+  margin: 0 auto; // Középre igazítás
+  padding: 2rem; // Belső margók
+}
+
+// Form elemek stílusai
+input,
+select,
+textarea {
+  width: 100%; // Teljes szélesség
+  padding: 0.5em; // Belső margók
+  margin-bottom: 1em; // Alsó margó
+  border: 1px solid lighten(@primary-color, 50%); // Halvány szegély
+  border-radius: 4px; // Lekerekített sarkok
+  font-size: 1rem; // Betűméret
+
+  &:focus {
+    border-color: @accent-color; // Szegély színe fókuszban
+    outline: none; // Nincs kiemelés
+  }
+}
+
+// Listaelemek stílusai
+ul,
+ol {
+  padding-left: 1.5em; // Behúzás a listákhoz
+}
+
+li {
+  margin-bottom: 0.5em; // Elem közötti margó
+}
+
+// Általános stílusok
+* {
+  box-sizing: border-box; // Padding és border a méreten belül marad
+}
+
+// Alkalmazás konténer
+.app-container {
+  display: flex; // Flexbox elrendezés
+  height: 100vh; // Teljes képernyőmagasság
+}
+
+// Panelek stílusai
+.left-pane, .middle-panel, .right-pane {
+  flex: 1; // Egyenlő szélesség minden panelnek
+  padding: 20px; // Belső margók
+  box-sizing: border-box; // Padding nem növeli meg a szélességet
+}
+
+.left-pane {
+  border-right: 1px solid #ddd; // Elválasztó vonal jobb oldalon
+}
+
+.right-pane {
+  border-left: 1px solid #ddd; // Elválasztó vonal bal oldalon
+}

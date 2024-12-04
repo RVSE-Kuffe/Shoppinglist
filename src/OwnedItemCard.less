@@ -1,0 +1,40 @@
+.owned-item-card {
+  background-color: #f5f7fa; // Világos, nyugodt háttérszín
+  border: 1px solid #dcdfe6; // Lágy szegélyszín
+  border-radius: 10px; // Lekerekített sarkok
+  padding: 10px 15px; // Belső margók
+  margin: 10px 0; // Külső margók a kártyák között
+  display: flex; // Flexbox elrendezés
+  flex-direction: column; // Függőleges irányú rendezés
+  align-items: flex-start; // Balra igazított tartalom
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); // Árnyék a kártya alatt
+  transition: transform 0.2s ease, box-shadow 0.2s ease; // Simulékony mozgatás és árnyék váltás
+
+  &:hover {
+    transform: translateY(-2px); // Enyhe kiemelés hoverkor
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15); // Kiemeltebb árnyék hoverkor
+  }
+
+  .item-name {
+    font-size: 1.2rem; // Elem nevének betűmérete
+    font-weight: bold; // Vastagított szöveg
+    color: #333; // Lágy fekete szín
+    margin: 0 0 5px 0; // Alsó margó
+  }
+
+  .item-count {
+    font-size: 1rem; // Darabszám szövegének betűmérete
+    color: #555; // Lágy szürke szín
+  }
+
+  .decrement-button {
+    &:hover {
+      background-color: #ffa726; // Sötétebb narancs háttér hoverkor
+    }
+
+    &:disabled {
+      background-color: #ddd; // Szürke háttér, ha le van tiltva
+      cursor: not-allowed; // Tiltott ikon, ha nem használható
+    }
+  }
+}

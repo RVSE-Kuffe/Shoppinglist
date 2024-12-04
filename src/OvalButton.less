@@ -1,0 +1,28 @@
+.oval-button {
+  display: inline-flex; // Rugalmas, vízszintes elrendezés a tartalom számára
+  align-items: center; // Tartalom függőleges középre igazítása
+  justify-content: center; // Tartalom vízszintes középre igazítása
+  padding: 10px 20px; // Belső margók
+  font-size: 1rem; // Szöveg alapértelmezett mérete
+  color: white; // Szöveg színe fehér
+  background-color: #28a745; // Zöld háttérszín
+  border: none; // Nincs szegély
+  border-radius: 50px; // Ovális forma elérése
+  cursor: pointer; // Mutató ikon gombra állítva
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); // Finom árnyék a gomb alatt
+  transition: transform 0.2s; // Simulékony méretváltozás
+
+  &:hover {
+    transform: scale(1.05); // Gomb nagyítása hover állapotban
+  }
+
+  .icon {
+    font-weight: bold; // Ikon vastagított stílusa
+    margin-right: 10px; // Távolság az ikon és a szöveg között
+    font-size: 1.2rem; // Ikon mérete
+  }
+
+  .text {
+    font-size: 1rem; // Szöveg mérete
+  }
+}
